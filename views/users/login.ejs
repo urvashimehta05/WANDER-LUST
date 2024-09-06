@@ -1,0 +1,84 @@
+<html>
+    <head><title>Login page</title>
+<style>
+    .custom-bg {
+     
+      background-color: white;
+      min-height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .custom-card {
+      background-color: whitesmoke; /* Burlywood with transparency */
+      /* Adjust margin as needed */
+      width: 40%; /* Adjust width as needed */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       padding: 20px;
+    }
+  
+    #forget {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+  
+    .forget a {
+      color: #fe424d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    .create-account {
+      margin-top: 10px;
+      font-size: 18px;
+      color: whitesmoke;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .b-tn {
+      background-color: #fe424d;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+    }
+    .b-tn:hover {
+      background-color: whitesmoke;
+      color: #fe424d;
+    }
+    .b-tn.clicked {
+      background-color: #fe424d;
+    }
+  </style>
+  </head>
+  <body>
+    
+  <div class="custom-bg">
+    <div class="custom-card">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h1 class="text-center mb-4">Login</h1>
+          <form action="/listings/user/login" method="POST" class="needs-validation" novalidate autocomplete="username">
+            <div class="mb-3">
+              <label for="username" class="form-label required">Username</label>
+              <input name="username" type="text" class="form-control" required/>
+              <div class="valid-feedback">Please enter valid username</div>
+            </div>
+  
+            <div class="mb-3">
+              <label for="password" class="form-label required">Password</label>
+              <input name="password" type="password" id="password" class="form-control" autocomplete="current-password" required/>
+            </div>
+  
+            <button type="submit" class="btn btn-success btn-block b-tn">Login</button>
+          </form>
+          <p class="forget">Forgot Password? <a href="#">Click Here</a></p>
+          <a href="/signup" class="btn btn-primary btn-block b-tn">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  </html>

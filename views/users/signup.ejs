@@ -1,0 +1,53 @@
+<html>
+    <head><title>Sign-up form</title>
+        <style>
+            .container {
+                background-color: white;
+                min-height: 80vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .custom-card {
+                background-color: whitesmoke; /* Burlywood with transparency */
+                /* Adjust margin as needed */
+                width: 40%; /* Adjust width as needed */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                 padding: 20px;
+            }
+            .b-tn {
+                background-color: #fe424d;
+                text-decoration: none;
+                border: none;
+            }
+            .b-tn:hover {
+                background-color: whitesmoke;
+                color: #fe424d;
+            }
+        </style>
+  </head>
+    <body>
+        <div class="container">
+            <div class="custom-card">
+            <h2>Sign Up</h2>
+            
+            <form method="POST" action="/listings/signup" novalidate>
+
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary b-tn">Sign Up</button>
+            </form>
+            </div>
+    </body>
+    </html>
